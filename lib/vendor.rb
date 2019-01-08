@@ -8,27 +8,33 @@ class Vendor
   def initialize(name)
     @name = name
     @inventory = {}
-    @stock = 0
+    # @stock = 0
   end
 
   def stock(item, amount = 0)
-    total = 0
-    total += amount
-    # @inventory = {}
-    @inventory.store(item, total)
+    @inventory.store(item, amount)
   end
 
   def check_stock(item)
-    # @stock
-    # @inventory = {}
-    # @inventory.store(item, @stock)
-
-    return @stock
-    # inventory.store(item, @stock)
-    # stock(item, amount = 0)
-    # amount +=
-    # returns total(from stock, incremented)
+    @inventory[item]
   end
+
+
+
+
+
+  # def stock(item, amount = 0)
+  #   # binding.pry
+  #   total = 0
+  #   total += amount
+  #   # binding.pry
+  #   @inventory.store(item, total)
+  #   # return total
+  # end
+  #
+  # def check_stock(item)
+  #   stock(item, amount = 0)
+  # end
 
   # def inventory
   #   check_stock(item)
