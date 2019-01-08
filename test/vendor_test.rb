@@ -24,7 +24,7 @@ class VendorTest < Minitest::Test
   end
 
   def test_it_starts_with_no_stock
-    skip
+    # skip
     vendor = Vendor.new("Rocky Mountain Fresh")
 
     vendor.stock("Peaches")
@@ -38,7 +38,7 @@ class VendorTest < Minitest::Test
 
     vendor.stock("Peaches", 30)
 
-    # assert_equal 30, vendor.check_stock("Peaches")
+    assert_equal 30, vendor.check_stock("Peaches")
 
     vendor.stock("Peaches", 25)
 
@@ -46,12 +46,12 @@ class VendorTest < Minitest::Test
   end
 
   def test_it_can_add_stock_to_inventory
-    skip
+    # skip
     vendor = Vendor.new("Rocky Mountain Fresh")
 
     vendor.stock("Peaches", 30)
 
-    # assert_equal 30, vendor.check_stock("Peaches")
+    assert_equal 30, vendor.check_stock("Peaches")
 
     vendor.stock("Peaches", 25)
     vendor.stock("Tomatoes", 12)
@@ -60,8 +60,3 @@ class VendorTest < Minitest::Test
   end
 
 end
-
-# pry(main)> vendor.stock("Tomatoes", 12)
-#
-# pry(main)> vendor.inventory
-# #=> {"Peaches"=>55, "Tomatoes"=>12}
