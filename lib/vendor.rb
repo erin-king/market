@@ -12,9 +12,10 @@ class Vendor
   end
 
   def stock(item, amount = 0)
-    @stock += amount
+    total = 0
+    total += amount
     # @inventory = {}
-    @inventory.store(item, @stock)
+    @inventory.store(item, total)
   end
 
   def check_stock(item)
